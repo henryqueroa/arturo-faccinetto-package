@@ -180,6 +180,63 @@
         .section-center { text-align: center; }
         .section-center .section-sub { margin-left: auto; margin-right: auto; }
 
+        /* VIDEO PLACEHOLDER (VSL slot) */
+        .video-wrap { padding: 24px 0 64px; }
+        .video-outer {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #0a0a0a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            border: 1px solid var(--border);
+        }
+        .video-placeholder {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2010 50%, #0a0a0a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+        }
+        .play-btn {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, background 0.25s ease;
+            box-shadow: 0 12px 36px rgba(212, 160, 23, 0.45);
+        }
+        .video-outer:hover .play-btn {
+            transform: scale(1.08);
+            background: var(--accent-hover);
+        }
+        .play-btn svg { margin-left: 5px; }
+        .video-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.65);
+        }
+        .video-embed-note {
+            position: absolute;
+            bottom: 14px;
+            right: 16px;
+            font-size: 10px;
+            color: rgba(245, 245, 245, 0.3);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+        }
+
         /* PROBLEM SECTION */
         .problem { background: var(--surface); }
         .problem-grid {
@@ -611,6 +668,32 @@
             </div>
         </div>
     </header>
+
+    <section class="video-wrap reveal">
+        <div class="container">
+            <div class="video-outer">
+                <!--
+                    EMBED INSTRUCTIONS:
+                    Reemplazá el div .video-placeholder de abajo con el embed real de tu VSL.
+                    Ejemplo YouTube:
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;inset:0;"></iframe>
+
+                    Ejemplo Vimeo:
+                    <iframe src="https://player.vimeo.com/video/VIDEO_ID?autoplay=1"
+                        style="position:absolute;inset:0;" width="100%" height="100%"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                -->
+                <div class="video-placeholder">
+                    <div class="play-btn">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="#0a0a0a"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <span class="video-label">Tu VSL va aquí</span>
+                </div>
+                <span class="video-embed-note">Reemplazá con tu embed</span>
+            </div>
+        </div>
+    </section>
 
     <section class="problem reveal">
         <div class="container-narrow section-center">
