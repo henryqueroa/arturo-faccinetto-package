@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEV8ATHLETE | Arturo Faccinetto · Atleta después de los 40</title>
+    <meta name="description" content="Programación atlética y trabajo de identidad para hombres 40+. Por Arturo Faccinetto, atleta CrossFit Games 2021 y coach con 20+ años de experiencia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --surface-2: #1c1c1c;
+            --accent: #d4a017;
+            --accent-hover: #b8860b;
+            --accent-glow: rgba(212, 160, 23, 0.15);
+            --text: #f5f5f5;
+            --text-muted: #9a9a9a;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* NAVBAR */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--text);
+            text-transform: uppercase;
+        }
+        .logo span { color: var(--accent); }
+        .nav-cta {
+            background: var(--accent);
+            color: #0a0a0a;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 11px 22px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-hover); }
+
+        /* HERO */
+        .hero {
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 70% 30%, rgba(212, 160, 23, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(212, 160, 23, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: var(--accent);
+            background: var(--accent-glow);
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            padding: 8px 18px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 84px);
+            line-height: 0.95;
+            margin-bottom: 24px;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero h1 .accent { color: var(--accent); }
+        .hero p.sub {
+            font-size: clamp(17px, 2vw, 20px);
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.55;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: #0a0a0a;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 18px 36px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .hero-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .hero-trust {
+            margin-top: 36px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .hero-trust strong { color: var(--accent); font-weight: 700; }
+
+        /* SECTION COMMON */
+        section { padding: 80px 0; }
+        .section-eyebrow {
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .section-title {
+            font-size: clamp(30px, 4.5vw, 52px);
+            margin-bottom: 18px;
+        }
+        .section-sub {
+            color: var(--text-muted);
+            font-size: 17px;
+            max-width: 640px;
+            margin-bottom: 48px;
+        }
+        .section-center { text-align: center; }
+        .section-center .section-sub { margin-left: auto; margin-right: auto; }
+
+        /* PROBLEM SECTION */
+        .problem { background: var(--surface); }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+        .problem-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .problem-card-num {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent);
+            font-size: 14px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+        .problem-card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .problem-card p { color: var(--text-muted); font-size: 15px; }
+
+        /* MECHANISM */
+        .mechanism { padding: 100px 0; }
+        .mech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 48px;
+        }
+        .mech-pillar {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .mech-pillar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent);
+        }
+        .mech-num {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent);
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+        .mech-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .mech-pillar p { color: var(--text-muted); font-size: 15px; }
+
+        /* PROOF */
+        .proof { background: var(--surface); }
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+        .proof-stat {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .proof-stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            color: var(--accent);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .proof-stat-label {
+            color: var(--text-muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .proof-note {
+            margin-top: 32px;
+            color: var(--text-muted);
+            font-size: 14px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* LEAD MAGNET */
+        .lead-magnet {
+            padding: 80px 0;
+        }
+        .lead-card {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid rgba(212, 160, 23, 0.2);
+            border-radius: 16px;
+            padding: 56px 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .lead-card h3 {
+            font-size: clamp(26px, 3vw, 38px);
+            margin-bottom: 16px;
+        }
+        .lead-card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .lead-form input {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 18px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+        .lead-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .lead-form button {
+            background: var(--accent);
+            color: #0a0a0a;
+            border: none;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.2s;
+        }
+        .lead-form button:hover { background: var(--accent-hover); }
+        .lead-form-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* OFFER */
+        .offer { background: var(--surface); padding: 100px 0; }
+        .offer-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px 40px;
+            max-width: 760px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+        .offer-card h3 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+        .offer-card .pillar { color: var(--accent); font-family: 'Oswald', sans-serif; letter-spacing: 3px; font-size: 13px; text-transform: uppercase; margin-bottom: 24px; }
+        .offer-includes {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 32px;
+        }
+        .offer-includes li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 14px;
+            color: var(--text);
+            font-size: 15px;
+        }
+        .offer-includes li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .offer-cta {
+            display: block;
+            background: var(--accent);
+            color: #0a0a0a;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 20px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .offer-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .offer-guarantee {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* AUTHORITY */
+        .authority { padding: 100px 0; }
+        .auth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .auth-photo {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            aspect-ratio: 4 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 13px;
+            position: relative;
+            overflow: hidden;
+        }
+        .auth-photo::before {
+            content: 'ARTURO';
+            position: absolute;
+            font-size: clamp(60px, 12vw, 110px);
+            font-weight: 700;
+            color: rgba(212, 160, 23, 0.08);
+            letter-spacing: -2px;
+        }
+        .auth-photo span { position: relative; z-index: 2; }
+        .auth-content h2 { margin-bottom: 20px; }
+        .auth-content p { color: var(--text-muted); margin-bottom: 16px; font-size: 16px; }
+        .auth-creds {
+            list-style: none;
+            padding: 0;
+            margin-top: 24px;
+        }
+        .auth-creds li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+            font-size: 14px;
+            display: flex;
+            gap: 12px;
+        }
+        .auth-creds li::before {
+            content: '·';
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: var(--surface);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: clamp(34px, 5.5vw, 60px);
+            margin-bottom: 20px;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .final-cta p {
+            color: var(--text-muted);
+            font-size: 18px;
+            max-width: 580px;
+            margin: 0 auto 32px;
+        }
+        .final-cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #0a0a0a;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .final-cta-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .final-cta-sub {
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        /* FAQ */
+        .faq { padding: 100px 0; }
+        .faq-list {
+            margin-top: 40px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-q {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 26px;
+            cursor: pointer;
+            user-select: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .faq-icon {
+            color: var(--accent);
+            font-size: 24px;
+            font-family: 'Oswald', sans-serif;
+            transition: transform 0.3s;
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-a-inner {
+            padding: 0 26px 22px;
+            color: var(--text-muted);
+            font-size: 15px;
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--bg);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+        }
+        .footer span { color: var(--accent); }
+
+        /* REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 880px) {
+            .problem-grid,
+            .proof-grid,
+            .mech-grid { grid-template-columns: 1fr; }
+            .lead-card { grid-template-columns: 1fr; padding: 40px 28px; }
+            .auth-grid { grid-template-columns: 1fr; }
+            section { padding: 64px 0; }
+            .hero { padding: 56px 0 72px; }
+        }
+        @media (max-width: 480px) {
+            .nav-cta { font-size: 11px; padding: 9px 16px; letter-spacing: 1px; }
+            .logo { font-size: 18px; letter-spacing: 3px; }
+            .offer-card { padding: 32px 24px; }
+            .hero-trust { gap: 18px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="logo">ELEV<span>8</span>ATHLETE</a>
+            <a href="#oferta" class="nav-cta">Aplicar</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="container hero-inner">
+            <div class="hero-eyebrow">Para hombres 40+</div>
+            <h1>A los 45 no necesitás otro plan de gym. <span class="accent">Necesitás entrenar como el hombre que decidiste ser.</span></h1>
+            <p class="sub">Programación atlética seria para hombres adultos, combinada con trabajo de identidad masculina. Cuatro días de 45 minutos. Resultados que se sostienen cinco años después.</p>
+            <a href="#oferta" class="hero-cta">Aplicar al programa</a>
+            <div class="hero-trust">
+                <span><strong>20+ años</strong> entrenando hombres</span>
+                <span><strong>CrossFit Games 2021</strong> · División 45-49</span>
+                <span><strong>Comunidad activa</strong> en LATAM</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="problem reveal">
+        <div class="container-narrow section-center">
+            <div class="section-eyebrow">El problema real</div>
+            <h2 class="section-title">Si pasaste de los 40, ya viste esto</h2>
+            <p class="section-sub">No es flojera. No es genética. Es que estás entrenando como si todavía tuvieras 25, con un cuerpo que tiene otras necesidades.</p>
+        </div>
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-card-num">01</div>
+                    <div class="problem-card-title">Te lesionás más seguido</div>
+                    <p>Los hombros tronan, la espalda baja late, las rodillas se quejan. Hace cinco años no pasaba. Hoy es la norma.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-num">02</div>
+                    <div class="problem-card-title">La recuperación ya no es la misma</div>
+                    <p>Una sesión fuerte el lunes te deja roto toda la semana. Tu sistema nervioso central tarda el doble en volver.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-num">03</div>
+                    <div class="problem-card-title">La agenda no da para dos horas</div>
+                    <p>Trabajo, hijos, pareja, casa. Los planes que viste en Instagram no caben en una vida real de hombre adulto.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-num">04</div>
+                    <div class="problem-card-title">La identidad no se ha actualizado</div>
+                    <p>Adentro seguís siendo el chico de prepa que se siente invencible. Afuera el espejo dice otra cosa. Ese choque te paraliza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mechanism reveal" id="metodo">
+        <div class="container-narrow section-center">
+            <div class="section-eyebrow">ELEV8 Method</div>
+            <h2 class="section-title">Tres niveles, entrenados al mismo tiempo</h2>
+            <p class="section-sub">Cuerpo, hábito e identidad. Si trabajás solo uno, el cambio dura 90 días y se va. Si trabajás los tres, se sostiene cinco años después.</p>
+        </div>
+        <div class="container">
+            <div class="mech-grid">
+                <div class="mech-pillar">
+                    <div class="mech-num">01 · CUERPO</div>
+                    <h3 class="mech-title">Programación adulta</h3>
+                    <p>Fuerza primero, acondicionamiento medido, movilidad obligatoria, recuperación respetada. Periodización por bloques pensada para mayores de 40, no copiada de una afiliada de CrossFit.</p>
+                </div>
+                <div class="mech-pillar">
+                    <div class="mech-num">02 · HÁBITO</div>
+                    <h3 class="mech-title">Estructura real</h3>
+                    <p>Cuatro sesiones de 45 minutos. Días fijos. Sin negociación. Pensado para padres y ejecutivos que ponen tiempo serio, no dos horas dispersas.</p>
+                </div>
+                <div class="mech-pillar">
+                    <div class="mech-num">03 · IDENTIDAD</div>
+                    <h3 class="mech-title">Trabajo de hombre</h3>
+                    <p>Masculinidad y propósito. Cada repetición alineada con quién decidiste ser cuando nadie te ve. Sin esto, el cuerpo regresa a su default en seis meses sin importar el plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof reveal">
+        <div class="container-narrow section-center">
+            <div class="section-eyebrow">La prueba</div>
+            <h2 class="section-title">Mis propios números</h2>
+            <p class="section-sub">No te lo digo para presumir. Te lo digo porque si yo puedo a los 54, vos podés a los 45.</p>
+        </div>
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-stat">
+                    <div class="proof-stat-number">215</div>
+                    <div class="proof-stat-label">Back Squat (lb)</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">285</div>
+                    <div class="proof-stat-label">Deadlift (lb)</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">185</div>
+                    <div class="proof-stat-label">Clean & Jerk (lb)</div>
+                </div>
+            </div>
+            <div class="proof-note">Datos verificados en CrossFit Games 2021. División Men 45-49. México.</div>
+        </div>
+    </section>
+
+    <section class="lead-magnet reveal">
+        <div class="container">
+            <div class="lead-card">
+                <div>
+                    <div class="section-eyebrow">Para empezar gratis</div>
+                    <h3>Plan de 30 días para hombres 40+</h3>
+                    <p>El primer bloque de programación que les doy a mis clientes nuevos. Cuatro semanas, cuatro sesiones por semana, 45 minutos. Diseñado para articulaciones de hombre adulto y una agenda real. Lo recibís por mail.</p>
+                </div>
+                <form class="lead-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Listo. Revisá tu correo.';">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu mejor email" required>
+                    <button type="submit">Quiero el plan</button>
+                    <div class="lead-form-note">Cero spam. Cancelás cuando quieras.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer reveal" id="oferta">
+        <div class="container-narrow section-center">
+            <div class="section-eyebrow">La oferta</div>
+            <h2 class="section-title">ELEV8 Method · Coaching completo</h2>
+            <p class="section-sub">Programación, estructura semanal, trabajo de identidad y una comunidad de hombres entrenando bajo el mismo método. No es para todos. Hablamos antes de empezar.</p>
+        </div>
+        <div class="container">
+            <div class="offer-card">
+                <div class="pillar">CUPO LIMITADO POR BLOQUE</div>
+                <h3>Programa de coaching ELEV8</h3>
+                <ul class="offer-includes">
+                    <li>Programación atlética periodizada, ajustada cada bloque a tu progreso</li>
+                    <li>Estructura semanal: 4 sesiones de 45 minutos, días fijos</li>
+                    <li>Plan nutricional con macros calculados a tu objetivo</li>
+                    <li>Trabajo de identidad masculina: contenidos y ejercicios escritos</li>
+                    <li>Llamadas grupales mensuales para revisión y dudas</li>
+                    <li>Comunidad cerrada de hombres entrenando bajo el método</li>
+                    <li>Feedback técnico por video según el plan que elijas</li>
+                </ul>
+                <a href="#oferta" class="offer-cta">Aplicar al programa</a>
+                <div class="offer-guarantee">Llamada de calificación primero. Si no calzás con el perfil, te lo digo de frente.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="authority reveal" id="quien-soy">
+        <div class="container">
+            <div class="auth-grid">
+                <div class="auth-photo">
+                    <span>FOTO · ARTURO</span>
+                </div>
+                <div class="auth-content">
+                    <div class="section-eyebrow">Quien te va a entrenar</div>
+                    <h2 class="section-title">Arturo Faccinetto</h2>
+                    <p>Tengo 54 años. Soy mexicano. Llevo más de veinte años entrenando hombres y a mí mismo bajo el mismo método. Compito en CrossFit Games en División Men 45-49 y mi cuerpo funciona mejor hoy que cuando tenía 30.</p>
+                    <p>No te voy a vender otra dieta. No te voy a copiar un plan que viste en internet. Te voy a dar lo que yo me apliqué a mí mismo para no resignarme a la panza de papá ni al cuerpo de señor de 60.</p>
+                    <ul class="auth-creds">
+                        <li>20+ años entrenando atletas, civiles, jóvenes y tactical</li>
+                        <li>CrossFit Games 2021 · División Men 45-49</li>
+                        <li>OPEX CCP L1 · Programación individualizada</li>
+                        <li>Starting Strength · Fuerza base</li>
+                        <li>USAW L1 · Levantamiento olímpico</li>
+                        <li>Precision Nutrition · Nutrición aplicada</li>
+                        <li>NASM CPT y CES · Entrenamiento correctivo</li>
+                        <li>CrossFit L2 + Movement, Mobility y Gymnastics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta reveal">
+        <div class="container">
+            <h2>El hombre que llegará a los 60 lo decidís hoy. Hoy, no el día de tu cumpleaños.</h2>
+            <p>Aplicá al programa. Hablamos. Si no es para vos, te lo digo y te ahorro tiempo.</p>
+            <a href="#oferta" class="final-cta-btn">Aplicar a ELEV8 Method</a>
+            <div class="final-cta-sub">Llamada de calificación · Sin compromiso de compra</div>
+        </div>
+    </section>
+
+    <section class="faq reveal">
+        <div class="container-narrow section-center">
+            <div class="section-eyebrow">Preguntas frecuentes</div>
+            <h2 class="section-title">Lo que la mayoría me pregunta</h2>
+        </div>
+        <div class="container">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>¿Esto es CrossFit?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">No es CrossFit puro. Es programación atlética que toma lo mejor del CrossFit, del strength training y del trabajo de movilidad, todo periodizado para un cuerpo de más de 40. Si tenés experiencia previa de CrossFit, encaja. Si no, también, porque la curva de entrada está pensada.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>¿Cuánto tiempo necesito por sesión?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">45 minutos por sesión, cuatro días a la semana. Total: tres horas de gym a la semana. Si no podés sostener eso, esto no es para vos y te lo digo de frente.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>Mi espalda y mis hombros ya no aguantan cargas altas. ¿Esto sirve?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Sí. La programación arranca con una fase de movilidad y carga ligera para reactivar tejido y patrones de movimiento. Las cargas suben en fases, no de un día para otro. Llevo años entrenando hombres con dolor crónico que recuperaron rango y fuerza.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>No tengo equipo en casa. ¿Necesito gym?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Sí, este programa supone que tenés acceso a un gym con barra, mancuernas, rack y al menos una máquina de cardio. Si entrenás solo con bandas y mancuernas livianas, hay otros programas que te van a servir más, pero no este.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>¿Cuánto cuesta?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">El precio se discute en la llamada de calificación, porque depende del nivel de acompañamiento que necesités. Lo que sí te digo: si lo comparás con lo que ya gastaste en gimnasios, suplementos y planes que no funcionaron, vas a ver el valor rápido.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span>¿Y si después de un mes no me funciona?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">El programa tiene una estructura de revisión a los 30 días. Si después de seguir el plan al pie de la letra no ves cambio, lo hablamos, ajustamos, y si sigue sin servir, no te quedo amarrado. Detalles concretos en la llamada.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        ELEV<span>8</span>ATHLETE · Arturo Faccinetto · 2026
+    </footer>
+
+    <script>
+        function toggleFaq(q) {
+            const item = q.parentElement;
+            const a = item.querySelector('.faq-a');
+            const isOpen = item.classList.contains('open');
+            if (isOpen) {
+                a.style.maxHeight = null;
+                item.classList.remove('open');
+            } else {
+                item.classList.add('open');
+                a.style.maxHeight = a.scrollHeight + 'px';
+            }
+        }
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construido para Arturo Faccinetto | Zytrom</title>
+    <meta name="description" content="Paquete de marketing completo construido específicamente para ELEV8ATHLETE. Investigación, ángulos, ads, landing y VSL outline. Por Zytrom.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #06070a;
+            --surface: #0d0f14;
+            --surface-2: #141821;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --accent-muted: rgba(16, 185, 129, 0.25);
+            --accent-glow: rgba(16, 185, 129, 0.12);
+            --text: #f5f5f7;
+            --text-muted: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+            --glass: rgba(13, 15, 20, 0.6);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 10% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 90% 95%, rgba(16, 185, 129, 0.05) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+        h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.18; font-weight: 700; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        a { color: inherit; text-decoration: none; }
+
+        /* HEADER */
+        .header { padding: 80px 0 48px; text-align: center; }
+        .brands {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .brand-zytrom { color: var(--accent); font-weight: 500; }
+        .brand-divider { width: 1px; height: 18px; background: var(--border); }
+        .brand-prospect { color: var(--text-muted); }
+        .header-badge {
+            display: inline-block;
+            background: var(--accent-glow);
+            border: 1px solid var(--accent-muted);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+        }
+        .header h1 {
+            font-size: clamp(34px, 5.5vw, 56px);
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+        .header h1 .accent { color: var(--accent); }
+        .header p.lede {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* STATS BAR */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 48px 0 64px;
+        }
+        .stat {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 40px;
+            font-weight: 500;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* SECTION TITLES */
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .section-title {
+            font-size: clamp(28px, 4vw, 38px);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .section-sub {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto 48px;
+        }
+
+        /* ACCORDION (DELIVERABLES) */
+        .deliverables { padding: 32px 0 64px; }
+        .accordion-item {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+        .accordion-item:hover { border-color: var(--accent-muted); }
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 26px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .accordion-label { display: flex; align-items: center; gap: 16px; }
+        .accordion-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            background: var(--accent-glow);
+            border: 1px solid var(--accent-muted);
+            padding: 4px 10px;
+            border-radius: 999px;
+            min-width: 32px;
+            text-align: center;
+        }
+        .accordion-title { font-size: 18px; font-weight: 600; }
+        .accordion-icon {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .accordion-content-inner {
+            padding: 0 26px 28px;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+        .accordion-content-inner h4 {
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 600;
+            margin: 18px 0 8px;
+        }
+        .accordion-content-inner h4:first-child { margin-top: 0; }
+        .accordion-content-inner p { margin-bottom: 12px; }
+        .accordion-content-inner ul { padding-left: 22px; margin: 8px 0 14px; }
+        .accordion-content-inner li { margin-bottom: 6px; }
+        .accordion-content-inner code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--surface-2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--accent);
+        }
+        .preview-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            padding: 10px 16px;
+            background: var(--accent-glow);
+            border: 1px solid var(--accent-muted);
+            border-radius: 10px;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        .preview-link:hover { background: rgba(16, 185, 129, 0.2); }
+
+        /* PROCESS */
+        .process { padding: 64px 0; }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .process-step {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 20px;
+        }
+        .process-step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .process-step-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+        .process-step-body { color: var(--text-muted); font-size: 13px; line-height: 1.6; }
+
+        /* CTA */
+        .cta { padding: 80px 0 100px; text-align: center; }
+        .cta-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--accent-muted);
+            border-radius: 24px;
+            padding: 56px 32px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 38px);
+            margin-bottom: 16px;
+        }
+        .cta p {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 17px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #06070a;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .cta-button:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .cta-sub {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-family: 'JetBrains Mono', monospace;
+            border-top: 1px solid var(--border);
+        }
+
+        /* SCROLL REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 720px) {
+            .stats { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .header { padding: 56px 0 32px; }
+            .accordion-header { padding: 18px 20px; }
+            .accordion-content-inner { padding: 0 20px 22px; padding-top: 20px; }
+            .cta-card { padding: 40px 22px; }
+        }
+        @media (max-width: 460px) {
+            .process-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="brands">
+                <span class="brand-zytrom">ZYTROM</span>
+                <span class="brand-divider"></span>
+                <span class="brand-prospect">ELEV8ATHLETE</span>
+            </div>
+            <div class="header-badge">Construido exclusivamente para</div>
+            <h1>Arturo <span class="accent">Faccinetto</span></h1>
+            <p class="lede">Un paquete de marketing completo, creado específicamente para tu negocio. Investigación, ángulos, anuncios y una landing en vivo, lista para tu funnel.</p>
+        </header>
+
+        <section class="stats reveal">
+            <div class="stat">
+                <div class="stat-number" data-target="6">0</div>
+                <div class="stat-label">Horas de análisis</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="8">0</div>
+                <div class="stat-label">Entregables a la medida</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Páginas en vivo</div>
+            </div>
+        </section>
+
+        <section class="deliverables reveal">
+            <div class="section-eyebrow">Paquete completo</div>
+            <h2 class="section-title">Lo que armé para vos</h2>
+            <p class="section-sub">Cinco bloques. Cada uno se despliega. Todo es tuyo, trabajemos juntos o no.</p>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-label">
+                        <span class="accordion-num">01</span>
+                        <span class="accordion-title">Diagnóstico y análisis</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <h4>Resumen</h4>
+                        <p>Análisis de tu marca ELEV8ATHLETE: oferta inferida, audiencia, voz, posicionamiento y proof actual. Tu autoridad personal y tu contenido funcionan. La fuga está en lo que pasa después del clic.</p>
+                        <h4>Cinco bottlenecks identificados</h4>
+                        <ul>
+                            <li>Sin landing page que convierta tráfico social. Cada video que te funciona muere en el link de la bio.</li>
+                            <li>Sin lead magnet ni captura de email. El negocio depende 100% de plataformas que no controlás.</li>
+                            <li>Oferta y precios opacos. Filtra mal y quema tiempo de venta en DMs no calificados.</li>
+                            <li>Cero retargeting ni nurture. Los buyers maduros (40+) compran después de 5 a 10 toques, no del primero.</li>
+                            <li>Posicionamiento fragmentado entre fitness, identidad masculina y relaciones. Confunde al comprador frío.</li>
+                        </ul>
+                        <h4>Recomendación principal</h4>
+                        <p>Resolver el bottleneck número uno (landing + captura) primero. Es el que más rápido se arregla y el que más impacto tiene sobre todo lo demás.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-label">
+                        <span class="accordion-num">02</span>
+                        <span class="accordion-title">Cinco ángulos de campaña</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Cada ángulo tiene headline y hook listos para anuncio, landing o video. Todos en tu voz, en español, para hombres 40+.</p>
+                        <h4>1. Atleta después de los 40 (mecanismo)</h4>
+                        <p>A los 45 no necesitás otro plan de gym. Necesitás entrenar como el hombre que decidiste ser.</p>
+                        <h4>2. El espejo no miente (prueba personal)</h4>
+                        <p>Soy mexicano, tengo 54 años y entreno como atleta de CrossFit Games. Esto no es genética.</p>
+                        <h4>3. Identidad antes que dieta (filosofía)</h4>
+                        <p>Tu cuerpo no cambia hasta que cambia quién decidís ser cuando nadie te ve.</p>
+                        <h4>4. Estructura para hombre ocupado (problema)</h4>
+                        <p>No tenés que entrenar dos horas al día. Necesitás la estructura correcta para 45 minutos, cuatro días.</p>
+                        <h4>5. Cómo se siente tener 50 con cuerpo de 35 (deseo)</h4>
+                        <p>Imagínate cómo se siente quitarte la camisa el próximo verano sin pensarlo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-label">
+                        <span class="accordion-num">03</span>
+                        <span class="accordion-title">Tres scripts de anuncio</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Tres conceptos listos para grabar cara a cámara. Hook, cuerpo y CTA escritos en tu voz.</p>
+                        <h4>Script 1. Direct Response</h4>
+                        <p>Apertura: "Si tienes más de 40 y tu cuerpo ya no responde como antes, esto es para ti." Cierra con CTA hacia la landing.</p>
+                        <h4>Script 2. Proof-Led</h4>
+                        <p>Abre con tus propios números (Back Squat 215, Deadlift 285, Clean & Jerk 185). Tu propio testimonio como anuncio.</p>
+                        <h4>Script 3. Educational</h4>
+                        <p>Enseña por qué después de los 40 no es la edad, es el volumen y la falta de periodización. Posiciona el método al final.</p>
+                        <p class="mono" style="margin-top: 14px; color: var(--text-muted); font-size: 13px;">Cada script: 30 a 75 segundos. Aptos para Reels, anuncios Meta o YouTube Shorts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-label">
+                        <span class="accordion-num">04</span>
+                        <span class="accordion-title">Landing page en vivo</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Te construí una página de venta completa para ELEV8ATHLETE. Hero con tu mecanismo, problema/agitación, solución, proof, oferta, autoridad, CTA y FAQ. Todo en una sola página, en español, móvil-responsive.</p>
+                        <a class="preview-link" href="https://henryqueroa.github.io/arturo-faccinetto-package/landing-page.html" target="_blank" rel="noopener">Ver landing en vivo →</a>
+                        <p style="margin-top: 14px;">Está deployada y lista para usar. La podés copiar, editar o adaptar al stack que ya tengas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-label">
+                        <span class="accordion-num">05</span>
+                        <span class="accordion-title">Outline de VSL</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Un outline de Video Sales Letter en seis bloques, listo para expandir a un script completo de 2,800 a 4,000 palabras.</p>
+                        <ul>
+                            <li>Hook (primeros 60 segundos)</li>
+                            <li>Problema y agitación (2 a 4 minutos)</li>
+                            <li>Solución y mecanismo (4 a 6 minutos)</li>
+                            <li>Credibilidad (2 a 3 minutos)</li>
+                            <li>Oferta (3 a 4 minutos)</li>
+                            <li>CTA y cierre (1 a 2 minutos)</li>
+                        </ul>
+                        <p>Pensado para 12 a 18 minutos de video cara a cámara con B-roll de entrenamiento. Funciona como VSL evergreen y como base para webinar grabado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process reveal">
+            <div class="section-eyebrow">Cómo trabajo</div>
+            <h2 class="section-title">El proceso de Zytrom</h2>
+            <p class="section-sub">Diagnóstico antes de construir. Cada fix ataca un cuello de botella específico, no la lista de moda del mes.</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-step-num">01</div>
+                    <div class="process-step-title">Diagnóstico</div>
+                    <div class="process-step-body">Identifico el cuello de botella real de tu sistema. Sin asumir.</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">02</div>
+                    <div class="process-step-title">Mensaje</div>
+                    <div class="process-step-body">Posicionamiento, oferta y voz alineados al comprador.</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">03</div>
+                    <div class="process-step-title">Infraestructura</div>
+                    <div class="process-step-body">Landing, captura, secuencias, pixel, retargeting.</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">04</div>
+                    <div class="process-step-title">Iteración</div>
+                    <div class="process-step-body">Datos, ajustes, escalada. Sin adivinar.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta reveal">
+            <div class="cta-card">
+                <div class="section-eyebrow">¿Querés implementarlo?</div>
+                <h2>Todo esto fue construido para ELEV8ATHLETE</h2>
+                <p>Imaginá lo que podemos armar trabajando juntos sobre el resto del sistema.</p>
+                <a class="cta-button" href="https://calendly.com/henryque-zytrom/30min" target="_blank" rel="noopener">Agendar una llamada de 20 minutos</a>
+                <div class="cta-sub">Sin presión. Diagnóstico antes que venta.</div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            ZYTROM · Bottleneck Scaling System · 2026
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const isOpen = item.classList.contains('open');
+            if (isOpen) {
+                content.style.maxHeight = null;
+                item.classList.remove('open');
+            } else {
+                item.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.stat-number').forEach(el => {
+                        const target = parseInt(el.dataset.target, 10);
+                        const duration = 1200;
+                        const start = performance.now();
+                        function step(now) {
+                            const t = Math.min(1, (now - start) / duration);
+                            el.textContent = Math.floor(t * target);
+                            if (t < 1) requestAnimationFrame(step);
+                            else el.textContent = target;
+                        }
+                        requestAnimationFrame(step);
+                    });
+                    statObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        const statsEl = document.querySelector('.stats');
+        if (statsEl) statObserver.observe(statsEl);
+    </script>
+</body>
+</html>
