@@ -84,9 +84,9 @@
         }
         .nav-cta:hover { background: var(--accent-hover); }
 
-        /* HERO */
+        /* HERO (compact above-the-fold) */
         .hero {
-            padding: 80px 0 100px;
+            padding: 28px 0 16px;
             position: relative;
             overflow: hidden;
         }
@@ -106,31 +106,31 @@
         .hero-eyebrow {
             display: inline-block;
             font-family: 'Oswald', sans-serif;
-            font-size: 13px;
-            letter-spacing: 4px;
+            font-size: 11px;
+            letter-spacing: 3px;
             color: var(--accent);
             background: var(--accent-glow);
             border: 1px solid rgba(212, 160, 23, 0.3);
-            padding: 8px 18px;
+            padding: 5px 14px;
             border-radius: 999px;
             text-transform: uppercase;
-            margin-bottom: 28px;
+            margin-bottom: 12px;
         }
         .hero h1 {
-            font-size: clamp(42px, 7vw, 84px);
-            line-height: 0.95;
-            margin-bottom: 24px;
-            max-width: 920px;
+            font-size: clamp(26px, 4.2vw, 46px);
+            line-height: 1.05;
+            margin-bottom: 14px;
+            max-width: 860px;
             margin-left: auto;
             margin-right: auto;
         }
         .hero h1 .accent { color: var(--accent); }
         .hero p.sub {
-            font-size: clamp(17px, 2vw, 20px);
+            font-size: clamp(14px, 1.5vw, 16px);
             color: var(--text-muted);
-            max-width: 640px;
-            margin: 0 auto 36px;
-            line-height: 1.55;
+            max-width: 600px;
+            margin: 0 auto 18px;
+            line-height: 1.5;
         }
         .hero-cta {
             display: inline-block;
@@ -138,8 +138,8 @@
             color: #0a0a0a;
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
-            font-size: 16px;
-            padding: 18px 36px;
+            font-size: 14px;
+            padding: 13px 28px;
             border-radius: 8px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -147,13 +147,13 @@
         }
         .hero-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
         .hero-trust {
-            margin-top: 36px;
+            margin-top: 16px;
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 20px;
             flex-wrap: wrap;
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 12px;
         }
         .hero-trust strong { color: var(--accent); font-weight: 700; }
 
@@ -181,10 +181,12 @@
         .section-center .section-sub { margin-left: auto; margin-right: auto; }
 
         /* VIDEO PLACEHOLDER (VSL slot) */
-        .video-wrap { padding: 24px 0 64px; }
+        .video-wrap { padding: 12px 0 40px; }
         .video-outer {
             position: relative;
             width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
             aspect-ratio: 16 / 9;
             background: #0a0a0a;
             border-radius: 12px;
@@ -637,13 +639,16 @@
             .lead-card { grid-template-columns: 1fr; padding: 40px 28px; }
             .auth-grid { grid-template-columns: 1fr; }
             section { padding: 64px 0; }
-            .hero { padding: 56px 0 72px; }
+            .hero { padding: 16px 0 8px; }
+            .hero h1 { font-size: clamp(22px, 6vw, 30px); }
+            .hero p.sub { font-size: 13px; margin-bottom: 14px; }
+            .hero-trust { display: none; }
+            .video-wrap { padding: 8px 0 24px; }
         }
         @media (max-width: 480px) {
             .nav-cta { font-size: 11px; padding: 9px 16px; letter-spacing: 1px; }
             .logo { font-size: 18px; letter-spacing: 3px; }
             .offer-card { padding: 32px 24px; }
-            .hero-trust { gap: 18px; font-size: 13px; }
         }
     </style>
 </head>
