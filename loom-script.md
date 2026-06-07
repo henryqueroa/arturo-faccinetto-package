@@ -4,50 +4,45 @@
 **Voz:** Henryque (Zytrom), no Arturo.
 **Idioma:** Español, tuteo.
 **Pantalla en pantalla:** Hub page abierta en el navegador (`https://henryqueroa.github.io/arturo-faccinetto-package/`).
+**Contexto:** Arturo ya respondió al primer outreach contando cuál es su oferta real (sesiones de vulnerabilidad y confrontación). Este Loom acompaña la versión 2 del paquete, reposicionado en base a esa respuesta.
 
 ---
 
 ## Opening (15 segundos)
 
-"Hola Arturo, soy Henryque, fundador de Zytrom. Te grabo este Loom corto porque me senté un rato a ver lo que estás haciendo con ELEV8ATHLETE y construí un paquete completo de marketing pensado específicamente para tu negocio. No es plantilla, no es genérico. Te explico en 2 minutos lo que armé y te dejo el link al final."
+"Hola Arturo, gracias por contarme qué hacés realmente. Eso cambió bastante el paquete. Me senté otra vez con tu marca, reposicioné todo en base a lo que me dijiste sobre las sesiones, y te grabo este Loom corto para mostrarte cómo quedó. Tres minutos, te explico, y al final te dejo el link."
 
 ## Walk-through (90 a 120 segundos)
 
 (Abrir hub page en pantalla)
 
-"Lo que estás viendo es una página que armé para ti. Está en vivo, podés abrirla cuando quieras. Tiene cinco bloques que se despliegan."
+"Lo que ves acá es el paquete, está en vivo. Tiene cinco bloques que se despliegan."
 
-(Click en Research Snapshot)
-"Acá está el análisis que hice de tu marca. Identifiqué cinco bottlenecks específicos en tu sistema de adquisición. El más importante: no tenés una landing page que convierta el tráfico orgánico que ya estás generando en IG y YouTube. Cada video que te funciona muere en el link de la bio."
+(Click en Diagnóstico y análisis)
+"Acá está el diagnóstico recalibrado. Antes había puesto cosas como 'mensaje fragmentado entre fitness, identidad y relaciones'. Sacado. Ahora el bottleneck número uno es claridad de oferta: tu marca ELEV8ATHLETE atrae bien, pero no traduce que lo que vendés son sesiones de identidad. Por eso te llegan DMs preguntando 'qué hacés'. Eso es trabajo del landing, no del DM."
 
-(Click en Campaign Angles)
-"Acá te dejé cinco ángulos de campaña con headlines y hooks listos. Cada uno escrito en tu voz, en español, para tu audiencia de hombres 40+. Uno lidera con tu mecanismo, otro con tu prueba personal, otro con identidad masculina."
+(Click en Cinco ángulos de campaña)
+"Cinco ángulos nuevos, todos identity-led. El uno es el headline del landing: 'Para el hombre que está cansado de huir de sí mismo'. El dos es para Reels: 'Vas a venir por la panza, te vas a quedar por la conversación que esquivás hace diez años'. El cinco usa tu proof de CrossFit pero pivotea rápido a identidad."
 
-(Click en Ad Script Concepts)
-"Tres scripts de anuncio listos para grabar. Uno direct response, uno con tu propio testimonio como atleta de CrossFit Games, y uno educativo donde enseñás algo aunque no compren."
-
-(Click en Landing Page Preview)
-"Y este es el bloque más importante. Te construí una landing page completa, en vivo, con tu identidad visual y tus secciones de conversión. Hero, mecanismo, proof, oferta, FAQ, CTA. Está deployada y podés ver el código si querés. Mirá la URL."
+(Click en Landing page en vivo)
+"Y este es el cambio grande. Te rescribí la landing completa. Hero arriba, problema, las tres movimientos de las sesiones (vulnerabilidad, confrontación, acompañamiento, palabras tuyas), cómo es una sesión, quién sos, oferta y FAQ. El VSL placeholder está adentro del hero, arriba del fold, listo para que metas tu video cuando lo grabes. Mirá la URL."
 
 (Mostrar landing page URL)
-"Esto resuelve el bottleneck número uno que vi en tu negocio. Y todo está armado para que lo uses tal cual, lo edites, o lo descartes."
+"Lo único que queda pendiente es el botón 'Agendar sesión inicial'. Hoy apunta a la misma sección de la página. Cuando me pases el Calendly real lo reemplazo en cinco segundos."
 
 ## Close (15 a 30 segundos)
 
-"Mirá, todo lo que armé es tuyo, trabajemos juntos o no. Lo construí porque me interesa lo que estás haciendo y quería mostrarte cómo trabajo antes de hablarte. Si te interesa una conversación de 20 minutos para ver cómo armar el resto del sistema, te dejo mi link de calendario abajo del video y dentro de la página."
+"Todo lo que armé sigue siendo tuyo, trabajemos juntos o no. Lo reposicioné porque me importa que esté bien armado, no porque tenga que vender. Si te interesa una conversación de 20 minutos sobre cómo armar lead magnet, captura, secuencia y retargeting al rededor de este nuevo landing, te dejo el link de calendario abajo del video y dentro de la página."
 
-"Si no te interesa, todo bien. Quédate con los archivos. Suerte con ELEV8ATHLETE."
-
-"Gracias por el rato. Henryque, de Zytrom."
+"Si no, todo bien. Quédate con el paquete. Gracias por tu tiempo. Henryque, de Zytrom."
 
 ---
 
 ## Notas de grabación
 
-- Hablar pausado, no acelerado.
-- Sonreír al inicio y al cierre. Tono profesional pero cercano.
-- Cuando se muestre la landing, hacer scroll lento por las secciones clave (hero, mecanismo, oferta).
+- Tono más cercano que el primer Loom. Arturo ya respondió, no estamos en frío.
+- Reconocer su respuesta con palabras propias, sin citarla literal en cámara (queda raro). El reconocimiento es energía, no recitado.
+- Cuando se muestre la landing, scroll lento por hero → mecanismo (los 3 movimientos) → proceso de sesión → FAQ.
 - Mostrar el botón Calendly al final con un cursor que pasa por encima, sin hacer clic.
-- Audio limpio, fondo silencioso, micrófono cerca.
-- Subtítulos automáticos activados en Loom para que los pueda ver con o sin audio.
+- Subtítulos automáticos activados en Loom.
 - Link de Calendly debajo del video en el mensaje de envío: `https://calendly.com/henryque-zytrom/30min`.
