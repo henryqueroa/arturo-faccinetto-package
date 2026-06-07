@@ -4,13 +4,13 @@
 **Voz:** Henryque (Zytrom), no Arturo.
 **Idioma:** Español, tuteo.
 **Pantalla en pantalla:** Hub page abierta en el navegador (`https://henryqueroa.github.io/arturo-faccinetto-package/`).
-**Contexto:** Arturo ya respondió al primer outreach contando cuál es su oferta real (sesiones de vulnerabilidad y confrontación). Este Loom acompaña la versión 2 del paquete, reposicionado en base a esa respuesta.
+**Contexto:** Loom evergreen que acompaña la entrega del paquete. La voz es la de un análisis del contenido público de Arturo (IG, YouTube, Threads), no la de un follow-up a una conversación previa.
 
 ---
 
 ## Opening (15 segundos)
 
-"Hola Arturo, gracias por contarme qué hacés realmente. Eso cambió bastante el paquete. Me senté otra vez con tu marca, reposicioné todo en base a lo que me dijiste sobre las sesiones, y te grabo este Loom corto para mostrarte cómo quedó. Tres minutos, te explico, y al final te dejo el link."
+"Hola Arturo, soy Henryque, fundador de Zytrom. Estudié tu marca, tu contenido en IG, YouTube y Threads, y armé un paquete completo de marketing pensado para ELEV8ATHLETE. Te explico en tres minutos lo que hay adentro y al final te dejo el link."
 
 ## Walk-through (90 a 120 segundos)
 
@@ -19,7 +19,7 @@
 "Lo que ves acá es el paquete, está en vivo. Tiene cinco bloques que se despliegan."
 
 (Click en Diagnóstico y análisis)
-"Acá está el diagnóstico recalibrado. Antes había puesto cosas como 'mensaje fragmentado entre fitness, identidad y relaciones'. Sacado. Ahora el bottleneck número uno es claridad de oferta: tu marca ELEV8ATHLETE atrae bien, pero no traduce que lo que vendés son sesiones de identidad. Por eso te llegan DMs preguntando 'qué hacés'. Eso es trabajo del landing, no del DM."
+"Acá está el diagnóstico. El mensaje que predicás en tu contenido es claro: vulnerabilidad, confrontación, acompañamiento, responsabilidad. Eso ya está afuera. El bottleneck número uno es que tu marca atlética atrae, pero la oferta real (sesiones online uno a uno) queda escondida hasta que alguien pregunta. Por eso los DMs nuevos arrancan con '¿qué hacés?'. Ese trabajo es del landing, no del DM."
 
 (Click en Cinco ángulos de campaña)
 "Cinco ángulos nuevos, todos identity-led. El uno es el headline del landing: 'Para el hombre que está cansado de huir de sí mismo'. El dos es para Reels: 'Vas a venir por la panza, te vas a quedar por la conversación que esquivás hace diez años'. El cinco usa tu proof de CrossFit pero pivotea rápido a identidad."
@@ -32,7 +32,7 @@
 
 ## Close (15 a 30 segundos)
 
-"Todo lo que armé sigue siendo tuyo, trabajemos juntos o no. Lo reposicioné porque me importa que esté bien armado, no porque tenga que vender. Si te interesa una conversación de 20 minutos sobre cómo armar lead magnet, captura, secuencia y retargeting al rededor de este nuevo landing, te dejo el link de calendario abajo del video y dentro de la página."
+"Todo lo que armé sigue siendo tuyo, trabajemos juntos o no. Lo construí porque me importa que esté bien armado, no porque tenga que vender. Si te interesa una conversación de 20 minutos sobre cómo armar lead magnet, captura, secuencia y retargeting al rededor de este landing, te dejo el link de calendario abajo del video y dentro de la página."
 
 "Si no, todo bien. Quédate con el paquete. Gracias por tu tiempo. Henryque, de Zytrom."
 

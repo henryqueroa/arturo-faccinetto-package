@@ -15,19 +15,21 @@ Placeholders activos:
 
 ---
 
-## Email 1 - Value Drop V2 (Día 1, post respuesta de Arturo)
+## Email 1 - Value Drop (Día 1)
 
-**Subject:** Reposicioné todo con lo que me contaste
+**Subject:** Un análisis de ELEV8ATHLETE
 
 Hola [PROSPECT NAME],
 
-Gracias por contarme qué hacés realmente. Esa frase, "un espacio de vulnerabilidad y confrontación donde te acompaño en tu proceso", cambió por completo cómo había armado el paquete.
+Soy Henryque, fundador de Zytrom. Estudié tu marca en IG, YouTube y Threads, y armé un paquete completo de marketing pensado para ELEV8ATHLETE.
 
-Me senté otra vez, saqué todo lo que había puesto de programa físico, y rescribí la landing, los emails, los ángulos, los scripts y el VSL. Ahora todo gira alrededor de las sesiones. El cuerpo aparece como consecuencia, no como producto.
+Lo que leo en tu contenido es claro: vulnerabilidad, confrontación, acompañamiento, responsabilidad. El mensaje ya está afuera. Lo que falta es la pieza que lo traduzca en una página que nombre la oferta y precalifique antes del DM. Eso es lo que construí.
+
+Adentro vas a encontrar: cinco ángulos identity-led, tres scripts de anuncio, un outline de VSL, una landing en vivo y un diagnóstico breve de tu sistema actual.
 
 Está acá: [DELIVERABLE LINK]
 
-No te pido nada. Si te sirve, tomalo. Si no, todo bien.
+Es tuyo. Sin pedido.
 
 Henryque
 Zytrom
@@ -203,7 +205,7 @@ Te dejo dos cosas:
 1. El paquete sigue donde lo dejé: [DELIVERABLE LINK]. Es tuyo.
 2. Si en cualquier momento de los próximos 12 meses te interesa hablar, mi puerta queda abierta: [BOOKING URL]
 
-Gracias por el tiempo de leer. Y gracias por la honestidad cuando me respondiste qué hacés realmente. Eso ya valió el trabajo.
+Gracias por el tiempo de leer. Lo que estás haciendo importa.
 
 Henryque
 Zytrom
@@ -214,7 +216,7 @@ Zytrom
 
 | Email | Día | Objetivo |
 |-------|-----|----------|
-| 1 | 1 | Reconocer respuesta de Arturo + entregar paquete reposicionado |
+| 1 | 1 | Entrega del paquete + análisis derivado del contenido público |
 | 2 | 3 | Insight específico del análisis recalibrado |
 | 3 | 5 | Prueba social (coach hispano similar) |
 | 4 | 8 | Táctica gratis específica para coaches de identidad |
